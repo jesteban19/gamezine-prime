@@ -347,3 +347,28 @@ $wp_customize->add_control( 'breadcrumb_type',
 	'priority'    => 100,
 	)
 );
+
+//Adsense Section
+$wp_customize->add_section('adsense_section',
+	array(
+		'title' => esc_html__( 'Adsense Options', 'magazine-prime'),
+		'priority' => 90,
+		'capability' => 'edit_theme_options',
+		'panel' => 'theme_option_panel',
+	)
+);
+
+$wp_customize->add_setting( 'adense_id_article',
+	array(
+	'default'           => '',
+	'capability'        => 'edit_theme_options',
+	)
+);
+$wp_customize->add_control( 'adense_id_article',
+	array(
+	'label'    => esc_html__( 'Adsense Script Articles', 'magazine-prime' ),
+	'section'  => 'adsense_section',
+	'type'     => 'textarea',
+	'priority' => 89,
+	)
+);

@@ -2,16 +2,7 @@
 	
 function informatico_adsense_shortcode_render($attr){
 	
-	$adsense = '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-format="fluid"
-     data-ad-layout="in-article"
-     data-ad-client="ca-pub-0147705992522980"
-     data-ad-slot="3783380037"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>';
+	$adsense = magazine_prime_get_option('adense_id_article');
 	return $adsense;
 	
 }
