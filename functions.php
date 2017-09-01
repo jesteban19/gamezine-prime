@@ -208,7 +208,11 @@ require get_template_directory() . '/inc/customizer/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+/**
+ * Load Shortcodes
+ */
 
+require get_template_directory() . '/inc/shortcode/shortcode.php';
 /**
  * Customizer control scripts and styles.
  *
