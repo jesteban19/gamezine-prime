@@ -139,15 +139,34 @@ if (!function_exists('magazine_prime_banner_slider')) :
                         wp_reset_postdata(); 
                         ?>
                     <?php } else { ?>
+                    
+                    <!-- image or adsense  script -->
+                    <?php 
+                        $enabled_script_ads = magazine_prime_get_option('slider_section_ads_option');
+                        $script_ads = magazine_prime_get_option('slider_section_ads_option_script');
+                    ?>
+                    <?php if(!$enabled_script_ads): ?>
                     <div class="col-md-4 small-pad">
                         <div class="featured-article">
-                            <div class="post-image">
-                                <a href="<?php echo esc_url(magazine_prime_get_option('slider_section_add_link')); ?>" target="_blank">
-                                    <img src="<?php echo esc_url(magazine_prime_get_option('slider_section_background_image')); ?>">
-                                </a>
+                           <div class="post-image">
+                                    <a href="<?php echo esc_url(magazine_prime_get_option('slider_section_add_link')); ?>" target="_blank">
+                                        <img src="<?php echo esc_url(magazine_prime_get_option('slider_section_background_image')); ?>">
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    <?php else:?>
+                        <div class="col-md-4 small-pad">
+                            <div class="featured-article">
+                                <?php echo $script_ads;?>
+                            </div>
+                        </div>
+
+                    <?php endif;?>
+
+                    <!-- ./image or adsense  script -->
+
+
                     <?php } ?>
                 </div>
             </div>

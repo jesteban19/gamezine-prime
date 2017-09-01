@@ -34,6 +34,22 @@ $wp_customize->add_control( 'show_top_section_date',
 	)
 );
 
+/*top_section_advertisement_option*/
+$wp_customize->add_setting('top_section_advertisement_option',
+	array(
+		'default' => false,
+		'capability' => 'edit_theme_options',
+	)
+);
+$wp_customize->add_control( 'top_section_advertisement_option',
+	array(
+		'label'    		=> esc_html__( 'Image / Script Adsense', 'magazine-prime' ),
+		'section'  		=> 'top_section_settings',
+		'type'     		=> 'checkbox',
+		'priority' 		=> 119,
+	)
+);
+
 // Setting top_section_advertisement.
 $wp_customize->add_setting( 'top_section_advertisement',
 	array(
@@ -67,6 +83,21 @@ $wp_customize->add_control( 'top_section_advertisement_url',
 		'section'  		=> 'top_section_settings',
 		'type'     		=> 'text',
 		'priority' 		=> 130,
+	)
+);
+/*top_section_advertisement_script*/
+$wp_customize->add_setting('top_section_advertisement_script',
+	array(
+		'default' => '',
+		'capability' => 'edit_theme_options',
+	)
+);
+$wp_customize->add_control( 'top_section_advertisement_script',
+	array(
+		'label'    		=> esc_html__( 'Script Adsense', 'magazine-prime' ),
+		'section'  		=> 'top_section_settings',
+		'type'     		=> 'textarea',
+		'priority' 		=> 131,
 	)
 );
 

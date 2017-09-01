@@ -93,6 +93,24 @@ $wp_customize->add_control( 'enable_slider_add',
 	)
 );
 
+//Ads
+
+/*Slider slider_section_ads_option*/
+$wp_customize->add_setting('slider_section_ads_option',
+	array(
+		'default' => false,
+		'capability' => 'edit_theme_options',
+	)
+);
+$wp_customize->add_control( 'slider_section_ads_option',
+	array(
+		'label'    		=> esc_html__( 'Image / Script Adsense', 'magazine-prime' ),
+		'section'  		=> 'slider_section_settings',
+		'type'     		=> 'checkbox',
+		'priority' 		=> 149,
+	)
+);
+
 // Setting slider_section_background_image.
 $wp_customize->add_setting( 'slider_section_background_image',
 	array(
@@ -127,5 +145,21 @@ $wp_customize->add_control( 'slider_section_add_link',
 		'section'  		=> 'slider_section_settings',
 		'type'     		=> 'text',
 		'priority' 		=> 160,
+	)
+);
+
+/*slider_section_ads_option_script*/
+$wp_customize->add_setting('slider_section_ads_option_script',
+	array(
+		'default' => '',
+		'capability' => 'edit_theme_options',
+	)
+);
+$wp_customize->add_control( 'slider_section_ads_option_script',
+	array(
+		'label'    		=> esc_html__( 'Script Adsense', 'magazine-prime' ),
+		'section'  		=> 'slider_section_settings',
+		'type'     		=> 'textarea',
+		'priority' 		=> 161,
 	)
 );

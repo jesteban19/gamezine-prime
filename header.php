@@ -118,6 +118,19 @@
                             </div>
                         </div>
                     <?php } ?>
+                    
+                    <?php 
+
+                    $enabled_adsense = magazine_prime_get_option('top_section_advertisement_option');
+                    $script_adsense = magazine_prime_get_option('top_section_advertisement_script');
+                    if ($enabled_adsense):
+                    ?>
+                        <div class="col-sm-7 col-sm-offset-1">
+                            <div class="twp-adv-header">
+                                <?php echo $script_adsense;?>
+                            </div>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

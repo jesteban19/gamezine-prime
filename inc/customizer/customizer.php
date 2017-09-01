@@ -43,9 +43,9 @@ function magazine_prime_customize_register( $wp_customize ) {
 			$wp_customize,
 			'theme_upsell',
 			array(
-				'title'    => esc_html__( 'Magazine Prime Pro', 'magazine-prime' ),
-				'pro_text' => esc_html__( 'Upgrade To Pro', 'magazine-prime' ),
-				'pro_url'  => 'http://www.themeinwp.com/theme/magazine-prime-pro/',
+				'title'    => esc_html__( 'Author', 'magazine-prime' ),
+				'pro_text' => esc_html__( 'Joseph Esteban', 'magazine-prime' ),
+				'pro_url'  => 'http://informaticomanchay.com/josephesteban',
 				'priority'  => 1,
 			)
 		)
