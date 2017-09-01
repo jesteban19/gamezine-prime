@@ -1,8 +1,8 @@
 <?php
 	
 function informatico_adsense_shortcode_render($attr){
-	?>
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	
+	$adsense = '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-format="fluid"
@@ -11,8 +11,9 @@ function informatico_adsense_shortcode_render($attr){
      data-ad-slot="3783380037"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-	<?php
+</script>';
+	return $adsense;
+	
 }
 function informatico_adsense_shortcode($context){
 return $context.=__("
